@@ -2,23 +2,6 @@
 .monaco-workbench .part.editor>.content .editor-group-container>.title .editor-actions {
     display: none !important;
 }
-/* Hide Window Icon VS Code */
-.monaco-workbench .part.titlebar>.titlebar-container>.titlebar-left>.window-appicon {
-    display: none !important;
-}
-
-/* Side bar */
-.part.sidebar {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
-    border-radius: 12px !important;
-    transition: transform 0.3s ease;
-    transform: translateX(-5%);
-}
-
-/* Container that holds the VS Code home icon. */
-.editor-group-watermark {
-    max-width: none !important;
-}
 
 /* Command Palette */
 .quick-input-widget {
@@ -31,6 +14,41 @@
     border-radius: 20px !important;
 }
 
+/* ------------ Activity Bar ------------ */
+.monaco-workbench .activitybar>.content {
+    justify-content: center;
+  }
+  
+  .monaco-workbench .activitybar>.content>.composite-bar {
+    margin-bottom: inherit;
+  }
+  
+   .monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-label.codicon {
+    border-radius: 12px !important;
+  }
+  
+  .monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-item.checked .active-item-indicator:before {
+    border-left-color: transparent !important;
+  }
+
+/* Side bar */
+.part.sidebar {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
+    border-radius: 12px !important;
+    transition: transform 0.3s ease;
+    transform: translateX(-5%);
+}
+/* Hide Window Icon VS Code */
+.monaco-workbench .part.titlebar>.titlebar-container>.titlebar-left>.window-appicon {
+    display: none !important;
+}
+
+/* Container that holds the VS Code home icon. */
+.editor-group-watermark {
+    max-width: none !important;
+}
+
+
 /* Project title's style at the top. */
 .monaco-workbench .part.titlebar>.titlebar-container>.titlebar-center>.window-title>.command-center .action-item.command-center-center {
     border: none !important;
@@ -38,17 +56,9 @@
 }
 
 /* Project Title */
-.titlebar-left {
-    justify-content: flex-start !important;
-    flex-grow: 0 !important;
-    width: auto !important;
-}
-
 /* Search Label */
 .search-label {
-    font-family: 'Geist Mono' !important;
     font-size: 14px !important;
-    color: #fff;
     display: block;
 }
 
@@ -63,14 +73,6 @@
 
 .codicon-arrow-right, .codicon-arrow-left {
     display: none !important;
-}
-
-.titlebar-right > * {
-    display: none !important;
-}
-
-.command-center-center {
-    width:  auto !important;
 }
 
 /*Change Logo on VS Code*/

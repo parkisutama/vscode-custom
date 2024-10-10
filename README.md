@@ -1,10 +1,8 @@
-# VS Code Custom CSS & JS
+# VS Code Customization
 
 This contain my personal Setup for VS Code both settings.json and vscode custom configuration
 
-
 https://github.com/user-attachments/assets/b18d9572-5dee-4d53-a01b-a974c33341e1
-
 
 ## List of Plugins
 
@@ -53,10 +51,26 @@ https://github.com/user-attachments/assets/b18d9572-5dee-4d53-a01b-a974c33341e1
 - [GitDoc](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.gitdoc)
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 
-extensions.ipynb contain automation to generate list of extension and output it as .md and .csv
-vscode-custom.css contain configuration for [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css) this will help personalize UI/UX of VS Code
+>[!Note]
+>extensions.ipynb contain automation to generate list of extension and output it as .md and .csv
+>This help me maintain and update list of extension that installed in my VS Code
+
+```
+// in settings.json
+// vscode-custom.css contain configuration for [Custom CSS and JS Loader] this //will help personalize UI/UX of VS Code
+// Backup your settings.json before any of change
+// Setup using Extension Custom CSS and JS Loader to load custom CSS
+// You can use url github (raw url) of vscode-custom.css if you want
+    
+    "vscode_custom_css.imports": [
+        //"file:///C:/path/to/file/vscode-custom.css"
+        "https://raw.githubusercontent.com/path/to/vscode-custom.css"
+    ]
+```
 
 ## Inspired by
+> Thanks to them this customization feel good, you can learn it from YouTube too
+> - [vscode-customizations by nursandiid](https://github.com/nursandiid/vscode-customizations)
+> - [vscode-settings-json by gleenraya](https://github.com/glennraya/vscode-settings-json)
 
-- [vscode-customizations by nursandiid](https://github.com/nursandiid/vscode-customizations)
-- [vscode-settings-json by gleenraya](https://github.com/glennraya/vscode-settings-json)
+

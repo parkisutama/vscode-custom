@@ -34,9 +34,9 @@
 /* Side bar */
 .part.sidebar {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
-    border-radius: 12px !important;
+    border-radius: 10px !important;
     transition: transform 0.3s ease;
-    transform: translateX(-5%);
+    transform: translateX(-1%);
 }
 /* Hide Window Icon VS Code */
 .monaco-workbench .part.titlebar>.titlebar-container>.titlebar-left>.window-appicon {

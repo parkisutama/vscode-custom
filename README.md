@@ -27,7 +27,6 @@ https://github.com/user-attachments/assets/b18d9572-5dee-4d53-a01b-a974c33341e1
 - [JSON to CSV](https://marketplace.visualstudio.com/items?itemName=khaeransori.json2csv)
 - [JSON](https://marketplace.visualstudio.com/items?itemName=meezilla.json)
 - [Fluent Icons](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.fluent-icons)
-- [Microsoft Edge Tools for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-edgedevtools.vscode-edge-devtools)
 - [Python Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy)
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
@@ -39,7 +38,6 @@ https://github.com/user-attachments/assets/b18d9572-5dee-4d53-a01b-a974c33341e1
 - [Jupyter Cell Tags](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vscode-jupyter-cell-tags)
 - [Jupyter Slide Show](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vscode-jupyter-slideshow)
 - [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
-- [PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.powershell)
 - [VS Code Speech](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-speech)
 - [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
 - [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
@@ -55,7 +53,7 @@ https://github.com/user-attachments/assets/b18d9572-5dee-4d53-a01b-a974c33341e1
 >extensions.ipynb contain automation to generate list of extension and output it as .md and .csv
 >This help me maintain and update list of extension that installed in my VS Code
 
-```
+```json
 // in settings.json
 // vscode-custom.css contain configuration for [Custom CSS and JS Loader] this //will help personalize UI/UX of VS Code
 // Backup your settings.json before any of change
@@ -69,8 +67,8 @@ https://github.com/user-attachments/assets/b18d9572-5dee-4d53-a01b-a974c33341e1
 ```
 
 ## Inspired by
+
 > Thanks to them this customization feel good, you can learn it from YouTube too
+>
 > - [vscode-customizations by nursandiid](https://github.com/nursandiid/vscode-customizations)
 > - [vscode-settings-json by gleenraya](https://github.com/glennraya/vscode-settings-json)
-
-

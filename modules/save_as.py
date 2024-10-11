@@ -5,5 +5,5 @@ def save_to_markdown(df, filename):
     with open(filename, 'w') as f:
         f.write("# My VS Code Extensions\n\n")
         for index, row in df.iterrows():
-            f.write(f"[{row['extension name']}]({row['url']})\n")
+            f.write(f"- [{row['extension name']}]({row['url']})\n")
             

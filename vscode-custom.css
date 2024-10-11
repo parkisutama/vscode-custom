@@ -1,16 +1,15 @@
-/* Toolbars when tabs are enabled. */
+/* ------------ Toolbars when tabs are enabled ------------ */
 .monaco-workbench .part.editor>.content .editor-group-container>.title .editor-actions {
     display: none !important;
 }
 
-/* Command Palette */
+/* ------------ Command Palette ------------ */
 .quick-input-widget {
     transform: translateY(-50%) !important;
     top: 50% !important;
     box-shadow: 0px 8px 20px rgb(227, 229, 230) !important;
     padding: 10px 10px 18px 10px !important;
     background-image: linear-gradient(#ebebeb 0%, #ebebeb 100%) !important;
-    /* backdrop-filter: blur(3px) !important; */
     border-radius: 20px !important;
 }
 
@@ -31,38 +30,37 @@
     border-left-color: transparent !important;
   }
 
-/* Side bar */
+/* ------------ Side bar ------------ */
 .part.sidebar {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
     border-radius: 10px !important;
     transition: transform 0.3s ease;
     transform: translateX(-1%);
 }
-/* Hide Window Icon VS Code */
+
+/* ------------ Hide Window Icon VS ------------ */
 .monaco-workbench .part.titlebar>.titlebar-container>.titlebar-left>.window-appicon {
     display: none !important;
 }
 
-/* Container that holds the VS Code home icon. */
+/* ------------ Container that holds the VS Code home icon. ------------ */
 .editor-group-watermark {
     max-width: none !important;
 }
 
-
-/* Project title's style at the top. */
+/* ------------ Project title's style at the top ------------ */
 .monaco-workbench .part.titlebar>.titlebar-container>.titlebar-center>.window-title>.command-center .action-item.command-center-center {
     border: none !important;
     background: transparent !important;
 }
 
-/* Project Title */
-/* Search Label */
+/* ------------ Search Label ------------ */
 .search-label {
     font-size: 14px !important;
     display: block;
 }
 
-/* Search icon */
+/* ------------ Search icon ------------ */
 .search-icon {
     display: none !important;
 }
@@ -75,7 +73,7 @@
     display: none !important;
 }
 
-/*Change Logo on VS Code*/
+/* ------------ Custom logo on welcome screen ------------ */
 .letterpress {
     background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg viewBox='541.3985 234.5539 21.6328 28.4261' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0.17708201838348714, -9.85156734177147)'%3E%3Cpath style='stroke-miterlimit: 1.81; stroke-width: 0.2px; fill: rgb(147, 212, 241); stroke: rgb(82, 82, 82); transform-origin: 548.956px 261.028px;' d='M 550.194 265.411 L 547.715 256.647' transform='matrix(0.059202, 0.998246, -0.998246, 0.059202, -0.00001, -0.000022)'/%3E%3Cpath style='stroke-miterlimit: 1.81; stroke-width: 0.2px; fill: rgb(147, 212, 241); stroke: rgb(82, 82, 82); transform-origin: 556.209px 261.467px;' d='M 557.913 258.615 L 554.506 264.311' transform='matrix(0, -1, 1, 0, 0.000029, 0.000005)'/%3E%3Cpath style='stroke-miterlimit: 1.81; stroke-width: 0.2px; fill: rgb(147, 212, 241); stroke: rgb(82, 82, 82); transform-origin: 552.456px 254.475px;' d='M 557.586 253.972 L 547.331 254.976' transform='matrix(0.059202, 0.998246, -0.998246, 0.059202, -0.000003, -0.000009)'/%3E%3Cpath style='stroke-miterlimit: 1.81; stroke-width: 0.2px; fill: rgb(147, 212, 241); stroke: rgb(82, 82, 82); transform-origin: 554.111px 252.007px;' d='M 557.076 249.523 L 551.148 254.492' transform='matrix(0.059202, 0.998246, -0.998246, 0.059202, -0.000027, 0.000022)'/%3E%3Cpath style='stroke-miterlimit: 1.81; stroke-width: 0.2px; fill: rgb(147, 212, 241); stroke: rgb(82, 82, 82); transform-origin: 549.135px 252.594px;' d='M 552.394 255.234 L 545.878 249.957' transform='matrix(0.059202, 0.998246, -0.998246, 0.059202, -0.000003, 0.000016)'/%3E%3Cpath style='stroke-miterlimit: 1.81; stroke-width: 0.2px; fill: rgb(147, 212, 241); stroke: rgb(82, 82, 82); transform-box: fill-box; transform-origin: 50%25 50%25;' d='M 548.883 260.723 L 542.253 258.029' transform='matrix(0.059202, 0.998246, -0.998246, 0.059202, 0.000014, 0.000014)'/%3E%3Cpath style='stroke-miterlimit: 1.81; stroke-width: 0.2px; fill: rgb(147, 212, 241); stroke: rgb(82, 82, 82); transform-box: fill-box; transform-origin: 50%25 50%25;' d='M 562.486 257.699 L 553.811 260.306' transform='matrix(0, -1, 1, 0, 0.000002, 0.000002)'/%3E%3Cpath style='stroke-miterlimit: 1.81; stroke-width: 0.2px; fill: rgb(147, 212, 241); stroke: rgb(82, 82, 82); transform-box: fill-box; transform-origin: 50%25 50%25;' d='M 557.642 269.621 L 553.217 261.706' transform='matrix(0, -1, 1, 0, 0.000017, -0.000015)'/%3E%3Cpath style='stroke-miterlimit: 1.81; stroke-width: 0.2px; fill: rgb(147, 212, 241); stroke: rgb(82, 82, 82); transform-box: fill-box; transform-origin: 50%25 50%25;' d='M 560.702 258.78 L 541.972 258.546' transform='matrix(0, -1, 1, 0, -0.00003, -0.00003)'/%3E%3Cpath style='stroke-miterlimit: 1.81; stroke-width: 0.2px; fill: rgb(147, 212, 241); stroke: rgb(82, 82, 82); transform-box: fill-box; transform-origin: 50%25 50%25;' d='M 550.375 262.024 L 545.055 268.648' transform='matrix(0, -1, 1, 0, 0.000029, 0.000032)'/%3E%3Cpath d='M 543.547 262.615 C 543.544 262.055 543.99 261.576 544.551 261.542 C 545.211 261.498 545.675 262.011 545.708 262.543 C 545.752 263.168 545.267 263.671 544.688 263.702 C 544.103 263.735 543.546 263.273 543.547 262.615 Z' style='fill: rgb(231, 114, 113); stroke: rgb(231, 114, 113); stroke-opacity: 0.39; transform-box: fill-box; transform-origin: 50%25 50%25;' transform='matrix(0, -1, 1, 0, -0.000003, 0)'/%3E%3Cpath d='M 558.364 263.413 C 558.361 262.854 558.807 262.375 559.368 262.34 C 560.028 262.297 560.492 262.81 560.525 263.342 C 560.569 263.967 560.084 264.47 559.505 264.501 C 558.92 264.534 558.362 264.071 558.364 263.413 Z' style='fill: rgb(72, 168, 196); stroke-opacity: 0.39; stroke: rgb(72, 168, 196); transform-box: fill-box; transform-origin: 50%25 50%25;' transform='matrix(0, -1, 1, 0, -0.000046, -0.000018)'/%3E%3Cpath d='M 550.415 249.264 C 550.411 248.704 550.857 248.226 551.418 248.191 C 552.078 248.147 552.542 248.661 552.575 249.193 C 552.619 249.818 552.135 250.32 551.555 250.351 C 550.97 250.384 550.413 249.922 550.415 249.264 Z' style='fill: rgb(235, 133, 255); stroke: rgb(235, 133, 255); stroke-opacity: 0.39; transform-box: fill-box; transform-origin: 50%25 50%25;' transform='matrix(0, -1, 1, 0, -0.000001, -0.000002)'/%3E%3Cpath d='M 550.095 267.959 C 550.091 267.4 550.537 266.921 551.098 266.886 C 551.758 266.842 552.222 267.356 552.255 267.888 C 552.299 268.513 551.815 269.016 551.235 269.047 C 550.65 269.08 550.093 268.617 550.095 267.959 Z' style='stroke-opacity: 0.39; fill: rgb(147, 212, 241); stroke: rgb(147, 212, 241); transform-box: fill-box; transform-origin: 50%25 50%25;' transform='matrix(0, -1, 1, 0, 0, 0.000001)'/%3E%3Cpath d='M 555.809 254.7 C 555.805 254.141 556.251 253.662 556.812 253.627 C 557.472 253.583 557.936 254.097 557.969 254.629 C 558.013 255.254 557.529 255.756 556.949 255.787 C 556.364 255.82 555.807 255.358 555.809 254.7 Z' style='fill: rgb(194, 215, 48); stroke: rgb(186, 218, 85); stroke-opacity: 0.39; transform-box: fill-box; transform-origin: 50%25 50%25;' transform='matrix(0, -1, 1, 0, 0.000029, 0.000029)'/%3E%3Cpath d='M 545.593 256.111 C 545.589 255.552 546.035 255.073 546.596 255.038 C 547.256 254.994 547.72 255.508 547.753 256.04 C 547.797 256.665 547.313 257.168 546.733 257.199 C 546.148 257.231 545.591 256.769 545.593 256.111 Z' style='stroke-opacity: 0.39; paint-order: stroke; fill: rgb(249, 247, 199); stroke: rgb(218, 210, 0); transform-box: fill-box; transform-origin: 50%25 50%25;' transform='matrix(0, -1, 1, 0, -0.000039, -0.000024)'/%3E%3Cpath d='M 552.756 259.633 C 552.756 259.337 552.99 259.087 553.286 259.067 C 553.63 259.045 553.875 259.315 553.895 259.593 C 553.919 259.924 553.661 260.189 553.358 260.204 C 553.051 260.22 552.756 259.979 552.756 259.633 Z' style='stroke-opacity: 0.39; paint-order: stroke; stroke: rgb(26, 70, 239); fill: rgb(199, 202, 249); transform-origin: 553.327px 259.637px;' transform='matrix(0, -1, 1, 0, -0.000035, -0.000023)'/%3E%3C/g%3E%3C/svg%3E") !important;
     background-repeat: no-repeat no-repeat !important;

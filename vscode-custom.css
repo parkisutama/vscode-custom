@@ -1,58 +1,103 @@
-/* ------------ Toolbars when tabs are enabled ------------ */
-.monaco-workbench .part.editor>.content .editor-group-container>.title .editor-actions {
-    display: none !important;
+/* Editor customization */
+.monaco-editor {
+    border-radius: 0.5rem;
+    overflow: hidden;
 }
 
-/* ------------ Hide Window Icon VS ------------ */
-.monaco-workbench .part.titlebar>.titlebar-container>.titlebar-left>.window-appicon {
-    display: none !important;
+.monaco-editor-background {
+    border-radius: 0.2rem;
 }
 
-/* ------------ Container that holds the VS Code home icon. ------------ */
-.editor-group-watermark {
-    max-width: none !important;
+/* Tab customization */
+.monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.selected.tab-border-top>.tab-border-top-container {
+    height: 0;
 }
 
-/* ------------ Project title's style at the top ------------ */
+.breadcrumbs-below-tabs {
+    border-radius: 0.5rem 0.5rem 0 0;
+    overflow: hidden;
+    background: var(--vscode-quickInput-background);
+}
+
+.monaco-breadcrumbs {
+    font-size: 0.7rem;
+}
+
+/* Widget customization */
+.monaco-editor .sticky-widget {
+    box-shadow: none;
+    border-color: #2b2d30;
+}
+
+.monaco-editor .scroll-decoration {
+    box-shadow: none;
+}
+
+.monaco-workbench .part.editor>.content .editor-group-container.active>.title .tabs-container>.tab.active {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 20px 25px -5px, rgba(0, 0, 0, 0.23) 0px 10px 10px -5px;
+}
+
+/* .tabs-and-actions-container:has(.tab.active:first-child) {
+    box-shadow: -20px 5px 0 0 rgb(106, 106, 106);
+} */
+
+/* Split view customization */
+.monaco-split-view2.separator-border.vertical>.monaco-scrollable-element>.split-view-container>.split-view-view:not(:first-child):before,
+.monaco-split-view2.separator-border>.monaco-scrollable-element>.split-view-container>.split-view-view:not(:first-child):before {
+    background: var(--vscode-quickInput-background) !important;
+}
+
+/* Title bar customization */
 .monaco-workbench .part.titlebar>.titlebar-container>.titlebar-center>.window-title>.command-center .action-item.command-center-center {
-    border: none !important;
-    background: transparent !important;
+    border-radius: 5rem;
+    border: none;
 }
 
-/* ------------ Search Label ------------ */
-.search-label {
-    font-size: 14px !important;
-    display: block;
-}
-
-/* ------------ Search icon ------------ */
-.search-icon {
+.titlebar-left>.window-appicon {
     display: none !important;
 }
 
-.codicon-search::before {
-    display: none !important;
+.titlebar-center,
+.titlebar-left {
+    opacity: 0;
+    transition: all 0.15s;
 }
 
-.codicon-arrow-right,
-.codicon-arrow-left {
-    display: none !important;
+.titlebar-center:hover,
+.titlebar-left:hover {
+    opacity: 1;
+    pointer-events: all;
 }
 
-/* ------------ Custom logo on welcome screen ------------ */
-.letterpress {
-    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg xmlns:i='http://ns.adobe.com/AdobeIllustrator/10.0/' xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' version='1.1' x='0px' y='0px' viewBox='0 0 150 187.5' style='enable-background:new 0 0 150 150;' xml:space='preserve' id='svg4192' inkscape:version='0.91 r13725' sodipodi:docname='noun_883674_cc.svg'%3E%3Cmetadata id='metadata4208'%3E%3Crdf:RDF%3E%3Ccc:Work rdf:about=''%3E%3Cdc:format%3Eimage/svg+xml%3C/dc:format%3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage' /%3E%3C/cc:Work%3E%3C/rdf:RDF%3E%3C/metadata%3E%3Cdefs id='defs4206' /%3E%3Csodipodi:namedview pagecolor='%23ffffff' bordercolor='%23666666' borderopacity='1' objecttolerance='10' gridtolerance='10' guidetolerance='10' inkscape:pageopacity='0' inkscape:pageshadow='2' inkscape:window-width='2880' inkscape:window-height='1545' id='namedview4204' showgrid='false' inkscape:zoom='7.136' inkscape:cx='75' inkscape:cy='93.75' inkscape:window-x='0' inkscape:window-y='38' inkscape:window-maximized='1' inkscape:current-layer='svg4192' /%3E%3Cswitch id='switch4194' transform='translate(-3.3632287,15.695067)'%3E%3CforeignObject requiredExtensions='http://ns.adobe.com/AdobeIllustrator/10.0/' x='0' y='0' width='1' height='1' /%3E%3Cg i:extraneous='self' id='g4196'%3E%3Cpath d='m 119.1,59.1 c -0.7,-0.3 -1.2,-0.9 -1.3,-1.7 -0.1,-0.8 0.3,-1.5 1,-1.9 3.5,-2 5.7,-5.8 5.7,-9.9 0,-6.3 -5.1,-11.4 -11.4,-11.4 -1.7,0 -3.5,0.4 -5,1.2 -0.9,0.4 -2,0.2 -2.5,-0.7 -1.5,-2.2 -4,-3.5 -6.6,-3.5 -1.2,0 -2.3,0.3 -3.4,0.8 C 95,32.3 94.4,32.2 93.8,31.9 93.2,31.6 92.9,31 92.8,30.4 91.8,21.6 84.4,15 75.6,15 c -8.8,0 -16.2,6.6 -17.1,15.3 -0.1,0.6 -0.5,1.2 -1,1.5 -0.6,0.3 -1.2,0.3 -1.8,0 -1.9,-1 -3.9,-1.5 -6.1,-1.5 -7.4,0 -13.4,6 -13.4,13.4 0,3 1,5.9 2.8,8.2 0.5,0.6 0.6,1.4 0.2,2.1 -0.4,0.7 -1.1,1.1 -1.9,1 -0.1,0 -0.2,0 -0.4,0 -9.5,0 -17.3,7.7 -17.3,17.2 0,9.5 7.7,17.2 17.3,17.2 l 0.4,0 c 0.9,-0.1 1.8,0.5 2,1.5 1.5,5.9 6.8,10 12.9,10 2.4,0 4.7,-0.6 6.7,-1.8 0.6,-0.3 1.2,-0.4 1.8,-0.1 0.6,0.3 1,0.8 1.1,1.5 0.3,2.1 1.2,4.1 2.4,5.8 l -0.6,5.2 -2,19.1 c -0.1,1.1 0.2,2.2 1,3 0.7,0.8 1.8,1.3 2.9,1.3 l 21.2,0 c 1.1,0 2.2,-0.5 2.9,-1.3 0.7,-0.8 1.1,-2 1,-3.1 L 88.1,110.6 87.4,105 c 1.1,-1.9 1.7,-4.1 1.8,-6.3 0,-0.8 0.6,-1.5 1.3,-1.8 0.8,-0.3 1.6,0 2.1,0.6 1.5,1.8 3.7,2.8 6,2.8 3.9,0 7.3,-2.9 7.9,-6.7 0.1,-0.6 0.4,-1 0.8,-1.3 0.5,-0.3 1,-0.4 1.6,-0.3 1.2,0.3 2.6,0.5 3.9,0.5 9.5,0 17.3,-7.7 17.3,-17.2 0.2,-7.3 -4.3,-13.8 -11,-16.2 z m -53.5,72 2.1,-19.8 0.2,-1.5 1.4,-13.1 -0.1,0.1 L 51.1,71.4 71.1,85.6 76.2,55.4 79,72 98.8,57.9 80.9,83.2 l 3.2,26 0.3,2.7 2.4,19.3 -21.2,0 z' id='path4198' inkscape:connector-curvature='0' /%3E%3C/g%3E%3C/switch%3E%3C/svg%3E") !important;
-    background-repeat: no-repeat no-repeat !important;
-    background-position: center center !important;
-    background-size: cover !important;
-    background-repeat: no-repeat no-repeat !important;
-    background-position: center center !important;
-    background-size: contain !important;
-    width: 20% !important;
+.titlebar-center,
+.titlebar-right {
+    opacity: 0;
+    transition: all 0.15s;
 }
 
+.titlebar-center:hover,
+.titlebar-right:hover {
+    opacity: 1;
+    pointer-events: all;
+}
 
-/* ------------ Rounded Corner Theme Settings ------------ */
+/* Action item customization */
+li.action-item.icon.checked,
+li.action-item.icon:hover {
+    opacity: 1;
+}
+
+li.action-item.icon {
+    transition: all 0.15s;
+    opacity: 0.2;
+}
+
+.monaco-workbench .pane-composite-part>.header-or-footer>.composite-bar-container>.composite-bar>.monaco-action-bar .action-item.checked .active-item-indicator:before,
+.monaco-workbench .pane-composite-part>.header-or-footer>.composite-bar-container>.composite-bar>.monaco-action-bar .action-item:focus .active-item-indicator:before,
+.monaco-workbench .pane-composite-part>.title>.composite-bar-container>.composite-bar>.monaco-action-bar .action-item.checked .active-item-indicator:before,
+.monaco-workbench .pane-composite-part>.title>.composite-bar-container>.composite-bar>.monaco-action-bar .action-item:focus .active-item-indicator:before {
+    border-top-width: 1px;
+}
 
 /* ------------ Command Palette ------------ */
 .quick-input-widget {
@@ -64,9 +109,7 @@
     border-radius: 20px !important;
 }
 
-/* ------------ Activity Bar ------------ */
-
-/*Only Active when Activity Bar position on default*/
+/* Activity bar customization */
 .monaco-workbench .activitybar>.content {
     justify-content: center;
 }
@@ -83,34 +126,45 @@
     border-left-color: transparent !important;
 }
 
-/* ------------ Side bar ------------ */
-.part.sidebar {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
-    border-radius: 10px !important;
+/* Sidebar, Terminal, Primary and Secondary Sidebar customization */
+.sidebar {
+    margin: 0 5px 0 0 !important;
+    border-radius: 10px;
+    height: calc(100% - 2px);
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     transition: transform 0.3s ease;
-    transform: translateX(-2%);
+    transform: translateX(-2%)
 }
 
-/* ------------ Secondary Side bar ------------ */
-.part.auxiliarybar {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
-    border-radius: 10px !important;
+.monaco-workbench .part.auxiliarybar {
+    margin: 0 5px 0 0 !important;
+    border-radius: 10px;
+    height: calc(100% - 2px);
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     transition: transform 0.3s ease;
-    box-shadow: -20px 0px 20px rgba(0, 0, 0, .25), 20px 0px 20px rgba(0, 0, 0, .25);
+    transform: translateX(2%);
     z-index: 1;
-    transform: translate(0, 0);
-    /* Ensure the shadow is visible above other elements */
 }
 
-/* ------------ Panel ------------ */
-.part.panel {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
-    border-radius: 10px !important;
-    transition: transform 0.3s ease;
-    transform: translateY(1%);
+.monaco-workbench .part.panel {
+    margin: 0 10px 0 10px;
+    height: calc(100% - 10px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
 }
 
-/* Disable orange color top active tab */
+div#terminal {
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
 .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.selected.tab-border-top>.tab-border-top-container {
     height: 0;
 }
@@ -120,8 +174,8 @@
 }
 
 .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.active {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
-    background: var(--vscode-quickInput-background) !important
+    box-shadow: rgba(0, 0, 0, 0.311) 0px 20px 25px -5px, rgba(0, 0, 0, 0.23) 0px 10px 10px -5px;
+    background: rgba(214, 214, 214, 0.45) !important;
 }
 
 .editor-group-container {
@@ -131,4 +185,15 @@
 
 .editor-group-container .editor-container:has(.extension-editor) {
     border-radius: 0.5rem;
+}
+
+.letterpress {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' standalone='no'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 20010904//EN' 'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'%3E%3Csvg version='1.0' xmlns='http://www.w3.org/2000/svg' width='1120.000000pt' height='1120.000000pt' viewBox='0 0 1120.000000 1120.000000' preserveAspectRatio='xMidYMid meet'%3E%3Cg transform='translate(0.000000,1120.000000) scale(0.100000,-0.100000)'%0Afill='%23000000' stroke='none'%3E%3Cpath d='M2239 9413 c-9 -2 -19 -16 -22 -31 -3 -15 -3 -1152 -1 -2528 l5%0A-2501 -54 -44 c-108 -87 -156 -188 -164 -344 -7 -125 6 -230 62 -509 59 -296%0A71 -424 56 -605 -13 -167 -28 -251 -84 -471 -37 -146 -42 -178 -42 -280 0%0A-105 2 -120 28 -175 35 -76 105 -148 182 -188 59 -31 63 -32 218 -35 l157 -4%0A0 46 0 46 -129 0 c-123 0 -131 1 -158 24 l-28 24 0 1244 c0 683 1 2376 3 3761%0Al2 2517 135 0 135 0 0 30 0 30 -142 -1 c-79 -1 -150 -3 -159 -6z'/%3E%3Cpath d='M8677 9413 c-4 -3 -7 -17 -7 -30 0 -23 0 -23 135 -23 l135 0 2 -562%0Ac2 -310 3 -1430 3 -2490 0 -1812 1 -1928 17 -1945 10 -9 21 -13 25 -9 5 4 9%0A1140 11 2524 2 2359 1 2518 -15 2530 -18 13 -294 18 -306 5z'/%3E%3Cpath d='M5194 9006 c-58 -18 -128 -69 -169 -123 -34 -44 -56 -103 -70 -184%0Al-7 -36 55 5 c109 9 230 -49 287 -137 28 -43 38 -51 64 -51 72 0 136 -34 88%0A-47 -30 -7 -49 -52 -62 -144 -17 -113 -4 -192 45 -271 34 -54 35 -59 21 -85%0A-23 -45 -75 -113 -86 -113 -6 0 -20 21 -30 46 -28 63 -56 101 -101 134 l-38%0A27 48 31 c31 19 59 47 77 78 27 45 29 59 33 167 l3 118 -35 -6 c-34 -7 -34 -6%0A-41 34 -8 49 -59 110 -124 148 -36 22 -62 28 -128 31 -77 4 -84 3 -106 -20%0A-18 -17 -31 -22 -49 -17 -74 21 -180 -2 -232 -49 -37 -33 -61 -94 -60 -152 1%0A-43 -4 -60 -20 -78 -16 -17 -22 -40 -25 -87 -4 -56 0 -72 28 -134 31 -68 44%0A-83 52 -61 5 15 101 30 139 21 19 -5 69 -23 113 -41 68 -27 86 -31 135 -26%0A106 12 118 11 160 -18 70 -49 109 -125 131 -258 17 -101 24 -586 11 -710 -21%0A-189 -57 -272 -170 -382 -77 -76 -84 -77 -119 -12 -13 25 -16 51 -13 126 9%0A191 4 272 -18 334 -12 33 -21 65 -21 71 0 7 19 17 43 23 60 15 120 62 154 119%0A26 45 28 55 28 158 0 139 -19 198 -84 265 -63 66 -128 84 -196 56 l-35 -15 0%0A53 c0 74 -39 148 -94 181 -56 33 -115 33 -153 1 l-27 -24 -53 45 c-59 51 -112%0A73 -157 67 -51 -7 -115 -34 -130 -55 -13 -20 -14 -19 -36 10 -26 37 -92 77%0A-141 86 -45 8 -108 -8 -138 -36 -15 -14 -39 -22 -71 -24 -48 -4 -110 -29 -161%0A-68 -65 -47 -119 -164 -119 -254 0 -40 27 -122 48 -146 14 -16 13 -19 -6 -40%0A-33 -35 -52 -91 -52 -157 0 -65 10 -92 67 -175 l35 -50 106 -1 c129 -1 208%0A-26 246 -77 30 -41 38 -65 25 -73 -22 -13 -49 -90 -49 -142 0 -66 25 -118 81%0A-166 55 -46 96 -59 177 -54 73 4 125 30 158 79 l17 26 82 -62 c108 -82 176%0A-108 280 -109 44 0 94 3 111 8 29 7 33 5 62 -35 18 -24 32 -45 32 -48 0 -4%0A-24 -32 -53 -64 l-52 -58 -60 25 c-146 60 -340 71 -563 31 -81 -14 -96 -14%0A-110 -2 -143 121 -207 161 -314 196 -45 15 -47 23 -13 45 60 40 92 173 61 261%0A-8 26 -27 63 -41 82 -34 44 -118 86 -172 86 -24 0 -43 4 -43 9 0 18 -78 92%0A-115 109 -146 67 -365 -51 -365 -196 0 -33 -2 -35 -35 -35 -40 0 -100 -22%0A-128 -48 -30 -27 -58 -89 -64 -142 -22 -187 177 -342 383 -300 75 16 112 35%0A126 65 10 22 13 23 37 11 47 -24 121 -28 205 -11 46 10 94 14 115 10 81 -15%0A259 -117 289 -165 14 -23 23 -17 -103 -64 -33 -13 -67 -26 -76 -30 -13 -6 -22%0A4 -39 38 -83 172 -382 198 -467 42 -10 -19 -12 -19 -48 -2 -86 41 -222 -21%0A-276 -126 -43 -84 -13 -219 62 -282 69 -59 187 -79 242 -43 21 13 28 15 31 5%0A2 -7 12 -35 21 -61 16 -44 16 -50 1 -66 -20 -22 -21 -65 -2 -80 20 -17 50 1%0A66 39 10 23 19 30 41 30 35 0 42 -21 29 -90 -21 -110 -85 -218 -189 -318 -52%0A-50 -60 -61 -36 -51 105 45 226 154 288 259 l37 65 81 11 c62 9 91 19 122 41%0A46 32 97 119 97 163 0 20 10 33 37 51 54 36 76 71 81 133 6 71 -2 98 -39 140%0A-35 40 -36 40 71 74 166 55 345 73 477 49 98 -18 206 -64 199 -84 -3 -8 -25%0A-42 -49 -76 -24 -34 -86 -138 -137 -232 -179 -327 -252 -435 -371 -555 -69%0A-70 -51 -62 71 29 164 123 333 318 522 601 51 76 98 139 104 140 18 0 81 -68%0A128 -140 173 -260 341 -773 401 -1224 30 -222 16 -533 -35 -780 -54 -261 -90%0A-528 -120 -886 -36 -437 -69 -615 -140 -765 -117 -250 -265 -331 -732 -400%0A-230 -34 -273 -43 -333 -72 -52 -24 -111 -70 -102 -79 2 -3 24 0 48 5 70 15%0A217 30 464 46 496 33 818 79 1132 160 108 28 137 33 160 24 15 -6 105 -30 198%0A-54 293 -75 538 -108 1025 -140 210 -14 377 -34 427 -52 25 -8 -33 53 -72 77%0A-40 25 -126 46 -265 65 -348 47 -555 91 -682 145 -90 37 -196 100 -231 137%0A-27 29 -27 30 -12 66 19 45 19 135 1 202 -7 28 -39 114 -70 193 -106 266 -172%0A495 -201 704 -19 139 -19 366 0 488 21 131 23 140 41 140 23 0 43 58 56 162%0A10 80 9 106 -6 187 -13 75 -56 228 -83 298 -4 9 13 11 64 6 200 -16 439 68%0A600 211 166 148 273 384 287 632 l6 99 -19 -85 c-78 -354 -305 -600 -613 -664%0A-99 -21 -184 -20 -316 1 l-105 17 -63 132 c-138 288 -247 560 -284 709 -27%0A106 -32 287 -11 375 80 331 378 490 846 451 76 -6 144 -16 152 -23 8 -6 13%0A-23 11 -37 -2 -21 -17 -33 -70 -61 -118 -62 -158 -118 -158 -217 1 -112 64%0A-189 176 -214 50 -11 54 -14 60 -46 18 -96 149 -150 249 -104 77 35 119 102%0A131 205 9 77 24 60 24 -28 0 -59 4 -79 23 -106 47 -70 167 -96 229 -50 l29 21%0A38 -34 c103 -93 258 -70 328 50 36 62 38 138 5 183 l-23 31 31 36 c41 47 50%0A72 50 146 0 51 -5 70 -26 101 -26 38 -86 72 -105 60 -6 -3 -28 12 -49 33 -71%0A75 -212 86 -311 24 l-53 -33 -46 22 c-25 12 -78 42 -119 68 l-74 45 29 24 c16%0A13 62 40 102 60 62 31 86 37 157 41 115 6 210 -17 310 -74 104 -59 116 -71%0A164 -170 67 -139 148 -207 279 -235 47 -10 62 -8 125 12 120 38 198 139 180%0A231 -4 22 2 33 32 60 49 42 65 82 65 161 0 77 -28 137 -83 181 -31 25 -49 31%0A-103 34 -53 4 -70 9 -91 29 -23 24 -30 25 -101 21 -106 -7 -166 -35 -241 -113%0A-50 -52 -61 -69 -61 -97 l0 -34 -77 1 c-51 1 -89 7 -108 17 -67 36 -149 52%0A-260 53 l-110 0 28 30 c16 17 47 56 70 88 22 31 45 57 51 57 7 0 18 -16 25%0A-35 30 -85 104 -135 199 -135 65 0 113 13 154 43 38 28 78 107 78 155 0 38 1%0A40 39 45 128 17 200 128 170 265 -15 72 -61 130 -133 166 -54 28 -60 29 -104%0A17 -35 -9 -48 -9 -50 -1 -3 7 -18 27 -34 45 -79 91 -240 83 -335 -17 -44 -45%0A-62 -92 -53 -134 6 -25 3 -44 -13 -74 -30 -63 -35 -165 -9 -223 l21 -47 -50%0A-74 c-56 -85 -181 -206 -261 -254 -127 -75 -242 -95 -467 -80 -207 14 -383 5%0A-503 -26 -289 -74 -508 -275 -583 -534 l-22 -74 -53 69 c-30 37 -81 96 -114%0A131 l-59 62 39 57 c60 87 228 258 304 308 87 58 200 110 365 169 132 47 222%0A92 262 129 l23 20 62 -33 c78 -42 182 -52 252 -26 l45 17 40 -29 c85 -62 208%0A-69 284 -16 42 29 81 91 92 147 5 25 9 27 53 27 63 1 120 28 165 81 47 54 62%0A103 62 204 0 69 -4 86 -27 127 -16 25 -40 56 -54 67 l-27 21 28 0 c39 0 96 35%0A124 76 32 46 39 121 17 179 -20 51 -84 113 -125 121 -26 5 -29 11 -35 59 -12%0A108 -66 188 -155 233 -102 51 -229 52 -264 2 -9 -13 -17 -16 -27 -9 -22 13%0A-86 11 -123 -5 -38 -16 -112 -96 -121 -131 -3 -13 -11 -36 -16 -50 l-10 -26%0A-29 22 c-25 19 -39 21 -89 17 -125 -12 -199 -87 -210 -213 -5 -67 12 -112 63%0A-173 l26 -31 -28 -7 c-180 -43 -256 -269 -135 -398 28 -30 115 -76 143 -76 56%0A0 31 -67 -44 -119 -59 -40 -94 -53 -276 -101 -85 -23 -172 -50 -193 -61 -22%0A-11 -41 -19 -43 -17 -6 6 45 185 85 303 49 142 125 291 240 470 46 72 95 156%0A108 188 24 59 56 225 47 249 -3 9 27 23 100 47 125 41 169 64 207 111 109 136%0A5 370 -164 370 -24 0 -49 -5 -56 -12 -10 -10 -19 -5 -42 20 -16 18 -43 35 -60%0A38 -26 6 -31 12 -36 45 -14 85 -89 147 -164 135 -37 -6 -38 -5 -43 30 -17 105%0A-118 164 -221 129 -46 -16 -49 -16 -70 4 -44 41 -114 51 -192 27z m660 -855%0Ac36 -72 38 -83 27 -107 -12 -27 -12 -27 -32 -7 -11 10 -26 44 -34 74 -16 58%0A-20 133 -7 126 4 -3 25 -41 46 -86z m-14 -233 c0 -48 -46 -130 -163 -296 -97%0A-138 -182 -273 -222 -351 -9 -18 -20 -29 -25 -25 -13 14 -32 320 -25 388 7 62%0A35 152 75 239 17 38 25 47 38 42 49 -20 93 -27 157 -23 60 3 78 8 106 30 46%0A36 59 35 59 -4z m444 -824 c4 -14 19 -43 33 -65 14 -22 23 -43 19 -46 -4 -4%0A-38 -9 -75 -11 -69 -4 -181 19 -181 37 0 5 11 29 25 52 23 42 26 44 82 50 32%0A3 65 6 74 7 10 1 19 -8 23 -24z m-1355 -241 c1 -89 -2 -169 -5 -178 -9 -22%0A-57 -45 -97 -45 -78 0 -191 55 -304 147 -42 35 -42 35 -25 61 9 14 19 49 22%0A76 l5 51 73 -68 c80 -73 100 -82 168 -74 83 9 134 71 134 164 0 17 3 39 7 49%0A14 38 22 -22 22 -183z m2658 -145 c16 -20 24 -81 13 -98 -7 -12 -19 -4 -58 40%0Al-50 55 27 6 c43 11 58 10 68 -3z m-743 -182 c39 -19 82 -46 94 -59 l23 -24%0A-36 -53 c-19 -28 -35 -57 -35 -63 0 -5 -13 8 -29 29 -73 102 -187 148 -273%0A110 -14 -6 -20 -2 -28 19 -14 37 -6 45 44 45 30 0 52 7 67 20 33 28 83 21 173%0A-24z'/%3E%3Cpath d='M8990 2076 c0 -211 0 -213 -24 -239 -33 -36 -84 -47 -218 -47 l-118%0A0 0 -46 0 -45 163 3 c152 3 166 5 220 30 70 33 155 111 190 175 71 131 52 295%0A-40 358 -31 21 -49 25 -105 25 l-68 0 0 -214z'/%3E%3C/g%3E%3C/svg%3E%0A") !important;
+    background-repeat: no-repeat no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat no-repeat !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    height: 80% !important;
 }

@@ -1,3 +1,11 @@
+import os
+
+import pandas as pd
+import requests
+from dotenv import load_dotenv
+from lxml import html
+
+
 def load_environment_variables(dotenv_path):
     """
     Load environment variables from a .env file and return the value of 'CODE_CMD_PATH'.
@@ -8,10 +16,10 @@ def load_environment_variables(dotenv_path):
     Returns:
         str: The value of the 'CODE_CMD_PATH' environment variable, or None if it is not set.
     """
-    import os
-    from dotenv import load_dotenv
+
     load_dotenv(dotenv_path)
-    return os.getenv('CODE_CMD_PATH')
+    return os.getenv("CODE_CMD_PATH")
+
 
 def get_installed_extensions(code_cmd_path):
     """
@@ -24,8 +32,12 @@ def get_installed_extensions(code_cmd_path):
         list: A list of installed extension identifiers as strings.
     """
     import subprocess
-    result = subprocess.run([code_cmd_path, '--list-extensions'], capture_output=True, text=True)
+
+    result = subprocess.run(
+        [code_cmd_path, "--list-extensions"], capture_output=True, text=True
+    )
     return result.stdout.splitlines()
+
 
 def extract_xpath(xpath, url):
     """
@@ -34,13 +46,10 @@ def extract_xpath(xpath, url):
         xpath (str): The XPath expression to locate the desired content.
         url (str): The URL of the webpage to extract content from.
     Returns:
-        str or None: The extracted content as a string if successful, 
-                     or None if an error occurs (e.g., network issues, 
+        str or None: The extracted content as a string if successful,
+                     or None if an error occurs (e.g., network issues,
                      invalid XPath, or content not found).
     """
-    import requests
-    from lxml import html
-    
 
     try:
         response = requests.get(url)
@@ -51,10 +60,11 @@ def extract_xpath(xpath, url):
     except (requests.exceptions.RequestException, IndexError):
         return None
 
+
 def generate_extension_data(dotenv_path, extensions):
     """
     Generates a DataFrame containing extension names, identifiers, and URLs based on the provided extensions list.
-    This function loads environment variables from a .env file specified by `dotenv_path`, retrieves the XPATH 
+    This function loads environment variables from a .env file specified by `dotenv_path`, retrieves the XPATH
     environment variable, and uses it to extract extension names from generated URLs.
     Args:
         dotenv_path (str): The path to the .env file containing environment variables.
@@ -64,19 +74,32 @@ def generate_extension_data(dotenv_path, extensions):
     Raises:
         ValueError: If the XPATH environment variable is not set in the .env file.
     """
-    import pandas as pd
-    import os
-    from dotenv import load_dotenv
-    
+
     load_dotenv(dotenv_path)
-    xpath = os.getenv('XPATH')
+    xpath = os.getenv("XPATH")
 
     if not xpath:
         raise ValueError("XPATH environment variable not set in the .env file")
-    generated_url = ['https://marketplace.visualstudio.com/items?itemName=' + ext for ext in extensions]
+    generated_url = [
+        "https://marketplace.visualstudio.com/items?itemName=" + ext
+        for ext in extensions
+    ]
     extension_names = [extract_xpath(xpath, u) for u in generated_url]
-    return pd.DataFrame({
-        'extension name': extension_names,
-        'identifier': extensions,
-        'url': generated_url
-    })
+    return pd.DataFrame(
+        {
+            "extension name": extension_names,
+            "identifier": extensions,
+            "url": generated_url,
+        }
+    )
+
+
+def save_to_csv(df, filename):
+    df.to_csv(filename, index=False)
+
+
+def save_to_markdown(df, filename):
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write("# My VS Code Extensions\n\n")
+        for index, row in df.iterrows():
+            f.write(f"- [{row['extension name']}]({row['url']})\n")

@@ -127,30 +127,31 @@ li.action-item.icon {
 }
 
 /* Sidebar, Terminal, Primary and Secondary Sidebar customization */
-.monaco-workbench .part.sidebar {
-    margin: 0px 2px 0px 2px !important;
+.sidebar {
+    margin: 0 5px 0 0 !important;
     border-radius: 10px;
     height: calc(100% - 2px);
     display: flex;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     transition: transform 0.3s ease;
-
+    transform: translateX(-2%)
 }
 
 .monaco-workbench .part.auxiliarybar {
-    margin: 0px 2px 0px 2px !important;
+    margin: 0 5px 0 0 !important;
     border-radius: 10px;
     height: calc(100% - 2px);
     display: flex;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     transition: transform 0.3s ease;
+    transform: translateX(2%);
     z-index: 1;
 }
 
 .monaco-workbench .part.panel {
-    margin: 0 2px 0 2px;
+    margin: 0 10px 0 10px;
     height: calc(100% - 10px);
     border-radius: 10px;
     display: flex;
